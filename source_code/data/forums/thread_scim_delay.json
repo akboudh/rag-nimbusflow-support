@@ -1,0 +1,30 @@
+{
+  "thread_id": "forum-scim-thread",
+  "title": "How long does SCIM deprovisioning take?",
+  "created_at": "2025-11-05",
+  "product_version": "4.0",
+  "accepted_post_id": "p2",
+  "posts": [
+    {
+      "id": "p1",
+      "author": "oliver_admin",
+      "role": "customer",
+      "created_at": "2025-11-05",
+      "body": "If a contractor is removed from Okta, how quickly does NimbusFlow disable their access?"
+    },
+    {
+      "id": "p2",
+      "author": "legacy_partner",
+      "role": "partner",
+      "created_at": "2025-11-05",
+      "body": "In our tenant it looked like an hourly sync. We told our help desk to expect up to 60 minutes."
+    },
+    {
+      "id": "p3",
+      "author": "openops_noah",
+      "role": "support-engineer",
+      "created_at": "2025-11-06",
+      "body": "That was true on older workspaces before automatic retries shipped. Newer Enterprise workspaces should see updates much faster, especially after enabling the retry queue."
+    }
+  ]
+}

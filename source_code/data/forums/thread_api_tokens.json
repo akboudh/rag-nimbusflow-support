@@ -1,0 +1,30 @@
+{
+  "thread_id": "forum-token-thread",
+  "title": "Do API tokens expire?",
+  "created_at": "2025-01-10",
+  "product_version": "4.0",
+  "accepted_post_id": "p3",
+  "posts": [
+    {
+      "id": "p1",
+      "author": "rhea_c",
+      "role": "customer",
+      "created_at": "2025-01-10",
+      "body": "We use personal API tokens in a nightly integration. I cannot find anything in the older docs about expiration. Do tokens ever expire automatically?"
+    },
+    {
+      "id": "p2",
+      "author": "samit_dev",
+      "role": "customer",
+      "created_at": "2025-01-10",
+      "body": "On our workspace they have stayed valid for months. We only replace them if someone leaves."
+    },
+    {
+      "id": "p3",
+      "author": "openops_mila",
+      "role": "support-engineer",
+      "created_at": "2025-01-11",
+      "body": "At the moment personal tokens do not expire automatically. If you need a safer setup, use a service account and rotate the token on your own schedule."
+    }
+  ]
+}

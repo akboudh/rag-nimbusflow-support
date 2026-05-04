@@ -1,0 +1,30 @@
+{
+  "thread_id": "forum-agent-thread",
+  "title": "Desktop agent stuck on verifying certificate",
+  "created_at": "2026-02-18",
+  "product_version": "4.1",
+  "accepted_post_id": "p2",
+  "posts": [
+    {
+      "id": "p1",
+      "author": "maya_ops",
+      "role": "customer",
+      "created_at": "2026-02-18",
+      "body": "After adding a corporate HTTPS inspection proxy, the macOS desktop agent never gets past 'Verifying certificate'. Browser access still works."
+    },
+    {
+      "id": "p2",
+      "author": "openops_eli",
+      "role": "support-engineer",
+      "created_at": "2026-02-18",
+      "body": "The desktop agent uses the operating system trust store instead of a bundled CA file. Import the proxy root certificate into the macOS System keychain, mark it trusted, then restart the agent. The `nimbus-agent doctor` command should show the proxy certificate chain once the trust store is correct."
+    },
+    {
+      "id": "p3",
+      "author": "maya_ops",
+      "role": "customer",
+      "created_at": "2026-02-19",
+      "body": "Confirmed. Importing into the System keychain fixed it. Importing only into the login keychain was not enough."
+    }
+  ]
+}

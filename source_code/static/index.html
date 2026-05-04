@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NimbusFlow Multi-Source RAG</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css?v=20260503-ux6" />
+  </head>
+  <body>
+    <a class="skip-nav" href="#main">Skip to workspace</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-cluster">
+          <span class="brand-mark">NF</span>
+          <div class="brand-lines">
+            <div class="brand-row">
+              <strong>NimbusFlow</strong>
+              <span>Support Intelligence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-meta">
+          <div class="meta-block">
+            <span class="meta-label">Runtime</span>
+            <strong id="runtime-pill" class="runtime-pill">Runtime loading...</strong>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Model</span>
+            <strong id="response-model" class="meta-value">gpt-5-mini</strong>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Embeddings</span>
+            <strong id="embedding-model" class="meta-value">text-embedding-3-small</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="status-strip">
+        <p id="runtime-note" role="status" aria-live="polite">Runtime details loading.</p>
+      </div>
+
+      <div class="workspace-shell">
+        <aside class="left-pane panel-surface" aria-label="Prompt library and run history">
+          <section class="pane-section prompt-library">
+            <div class="sidebar-intro">
+              <span class="sidebar-kicker">Workspace</span>
+              <h2>Prompt library</h2>
+              <p>Pick a support scenario or write your own question.</p>
+            </div>
+
+            <div class="pane-head">
+              <h2>Examples</h2>
+            </div>
+
+            <div id="examples" class="examples" role="list" aria-label="Example support questions"></div>
+          </section>
+
+          <section class="pane-section pane-logs">
+            <div class="pane-head">
+              <h2>Run history</h2>
+              <span class="live-indicator">Live</span>
+            </div>
+            <div id="logs" class="logs" role="list" aria-label="Recent retrieval runs"></div>
+          </section>
+        </aside>
+
+        <main id="main" class="center-pane">
+          <section class="composer-card panel-surface">
+            <span class="eyebrow">Ask NimbusFlow</span>
+            <h1>Multi-source support answer lab</h1>
+            <p class="composer-brief">Ask a support question, then inspect how documentation, community threads, and engineering notes shaped the answer.</p>
+            <div class="query-frame">
+              <label for="query">Customer question</label>
+              <textarea id="query" placeholder="Why is the desktop agent stuck verifying a proxy certificate?"></textarea>
+              <div class="query-meta">
+                <span id="query-count">0 characters</span>
+                <span>Press Cmd/Ctrl + Enter to run</span>
+              </div>
+            </div>
+            <div class="composer-actions">
+              <div class="composer-meta">
+                <span>Retrieval mode: hybrid semantic + lexical</span>
+                <span>Reranking: contradiction-aware source weighting</span>
+              </div>
+              <div class="action-cluster">
+                <button id="clear-query" type="button" class="ghost-button">Clear</button>
+                <button id="ask" type="button" class="send-button">Run Retrieval</button>
+              </div>
+            </div>
+            <ol id="retrieval-steps" class="retrieval-steps" aria-live="off" hidden>
+              <li>Embedding query</li>
+              <li>Searching sources</li>
+              <li>Reranking evidence</li>
+              <li>Resolving conflicts</li>
+              <li>Generating answer</li>
+            </ol>
+          </section>
+
+          <section class="answer-card panel-surface">
+            <div class="card-head">
+              <div class="card-title">
+                <h2>Answer</h2>
+              </div>
+              <button id="copy-answer" type="button" class="ghost-button">Copy</button>
+            </div>
+            <div id="answer" class="answer" role="status" aria-live="polite">Run a query to see the response.</div>
+            <div class="answer-footer">
+              <span class="footer-pill">Grounded response</span>
+              <span id="trace-summary" class="footer-note" role="status" aria-live="polite">Ready for the next support question.</span>
+            </div>
+          </section>
+
+          <section class="trace-card panel-surface">
+            <div class="trace-row">
+              <span>Retrieval Trace</span>
+              <span class="trace-meta">Evidence, source mix, and conflict decisions update after each run.</span>
+            </div>
+          </section>
+        </main>
+
+        <aside class="right-pane">
+          <section class="panel-surface evidence-card">
+            <div class="pane-head">
+              <h2>Evidence Stack</h2>
+            </div>
+            <div id="usage" class="usage-overview" role="status" aria-live="polite"></div>
+          </section>
+
+          <section class="panel-surface contradiction-card">
+            <div class="pane-head">
+              <div class="title-with-tag">
+                <h2>Conflict Resolution</h2>
+              </div>
+            </div>
+            <div id="contradictions" class="contradictions" role="status" aria-live="polite"></div>
+          </section>
+
+          <section class="panel-surface chunks-card">
+            <div class="pane-head">
+              <h2>Source Excerpts</h2>
+              <span class="top-k">Top 5</span>
+            </div>
+            <div id="chunks" class="chunks-list" role="list" aria-label="Top source excerpts"></div>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="/app.js?v=20260503-ux6" defer></script>
+  </body>
+</html>

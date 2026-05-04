@@ -1,0 +1,119 @@
+[
+  {
+    "id": "doc-admin-guide",
+    "title": "NimbusFlow Administration Guide",
+    "path": "data/documentation/admin_guide.md",
+    "source_type": "documentation",
+    "authority": 1.0,
+    "updated_at": "2026-03-14",
+    "tags": ["sso", "scim", "roles", "security"],
+    "claims": [
+      {"topic": "scim_sync_delay", "value": "5 minutes", "confidence": 0.96},
+      {"topic": "saml_supported", "value": "yes", "confidence": 0.99},
+      {"topic": "group_mapping_limit", "value": "50 groups", "confidence": 0.92}
+    ]
+  },
+  {
+    "id": "doc-support-guide",
+    "title": "NimbusFlow Troubleshooting Guide",
+    "path": "data/documentation/support_guide.md",
+    "source_type": "documentation",
+    "authority": 1.0,
+    "updated_at": "2026-03-20",
+    "tags": ["desktop-agent", "rate-limit", "restore", "audit-logs"],
+    "claims": [
+      {"topic": "api_rate_limit", "value": "120 requests per minute", "confidence": 0.98},
+      {"topic": "restore_rpo", "value": "30 minutes", "confidence": 0.94},
+      {"topic": "restore_retention", "value": "30 days", "confidence": 0.93},
+      {"topic": "agent_cert_store", "value": "system trust store", "confidence": 0.95}
+    ]
+  },
+  {
+    "id": "doc-release-notes",
+    "title": "NimbusFlow 4.2 Release Notes",
+    "path": "data/documentation/release_notes_4_2.md",
+    "source_type": "documentation",
+    "authority": 0.98,
+    "updated_at": "2026-04-02",
+    "tags": ["release-4.2", "tokens", "audit-logs", "restore"],
+    "claims": [
+      {"topic": "personal_token_expiry", "value": "90 days", "confidence": 0.99},
+      {"topic": "service_token_expiry", "value": "no expiry by default", "confidence": 0.91},
+      {"topic": "audit_export_format", "value": "ndjson", "confidence": 0.88}
+    ]
+  },
+  {
+    "id": "forum-token-thread",
+    "title": "Do API tokens expire?",
+    "path": "data/forums/thread_api_tokens.json",
+    "source_type": "forum",
+    "authority": 0.62,
+    "updated_at": "2025-01-10",
+    "tags": ["api", "tokens", "auth"],
+    "claims": [
+      {"topic": "personal_token_expiry", "value": "no expiry", "confidence": 0.55}
+    ]
+  },
+  {
+    "id": "forum-agent-thread",
+    "title": "Desktop agent stuck on verifying certificate",
+    "path": "data/forums/thread_agent_certificate.json",
+    "source_type": "forum",
+    "authority": 0.74,
+    "updated_at": "2026-02-18",
+    "tags": ["desktop-agent", "certificate", "macos", "windows"],
+    "claims": [
+      {"topic": "agent_cert_store", "value": "system trust store", "confidence": 0.84}
+    ]
+  },
+  {
+    "id": "forum-scim-thread",
+    "title": "How long does SCIM deprovisioning take?",
+    "path": "data/forums/thread_scim_delay.json",
+    "source_type": "forum",
+    "authority": 0.68,
+    "updated_at": "2025-11-05",
+    "tags": ["sso", "scim", "identity"],
+    "claims": [
+      {"topic": "scim_sync_delay", "value": "hourly", "confidence": 0.51}
+    ]
+  },
+  {
+    "id": "blog-agent-tuning",
+    "title": "Tuning NimbusFlow Desktop Sync for Large Repositories",
+    "path": "data/blogs/desktop_sync_tuning.md",
+    "source_type": "blog",
+    "authority": 0.71,
+    "updated_at": "2026-01-22",
+    "tags": ["desktop-agent", "performance", "sync"],
+    "claims": [
+      {"topic": "sync_worker_count", "value": "4 workers default", "confidence": 0.7}
+    ]
+  },
+  {
+    "id": "blog-restore-post",
+    "title": "What We Learned From Rebuilding the Restore Pipeline",
+    "path": "data/blogs/restore_pipeline_lessons.md",
+    "source_type": "blog",
+    "authority": 0.7,
+    "updated_at": "2025-08-14",
+    "tags": ["restore", "backups", "reliability"],
+    "claims": [
+      {"topic": "restore_rpo", "value": "24 hours", "confidence": 0.45},
+      {"topic": "restore_retention", "value": "nightly snapshots", "confidence": 0.48}
+    ]
+  },
+  {
+    "id": "blog-4-2-migration",
+    "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+    "path": "data/blogs/token_rotation_4_2.md",
+    "source_type": "blog",
+    "authority": 0.77,
+    "updated_at": "2026-03-30",
+    "tags": ["release-4.2", "tokens", "migration", "security"],
+    "claims": [
+      {"topic": "personal_token_expiry", "value": "90 days", "confidence": 0.87},
+      {"topic": "service_token_expiry", "value": "long-lived", "confidence": 0.74}
+    ]
+  }
+]

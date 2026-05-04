@@ -1,0 +1,870 @@
+[
+  {
+    "query": "Do personal API tokens expire after NimbusFlow 4.2?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: NimbusFlow 4.2 introduces mandatory rotation for personal API tokens. **Personal tokens now expire after 90 days** and users receive reminders starting 14 days before expiration. Existing personal tokens created before 4\n- Documentation: Service accounts Service account tokens do **not expire by default**, but administrators can opt into rotation policies at the workspace level. OpenOps recommends rotating service tokens every 180 days even when no hard\n- Documentation: The public REST API allows **120 requests per minute per workspace token**. When the limit is exceeded, the API returns `429 Too Many Requests` with a `Retry-After` header in seconds.\n\nContradictions detected:\n- On `personal_token_expiry`, prefer documentation (90 days); conflicting evidence: documentation says 90 days, forum says no expiry.\n\nTop citations:\n- [documentation] NimbusFlow 4.2 Release Notes -> Security changes\n- [documentation] NimbusFlow 4.2 Release Notes -> Security changes / Service accounts\n- [documentation] NimbusFlow Troubleshooting Guide -> API rate limits\n- [forum] Do API tokens expire? -> Forum post p3",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 2,
+      "blog": 0
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Security changes",
+        "retrieval_score": 0.484704,
+        "rerank_score": 0.601351
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.480528,
+        "rerank_score": 0.501289
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Security changes / Service accounts",
+        "retrieval_score": 0.244079,
+        "rerank_score": 0.473143
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "API rate limits",
+        "retrieval_score": 0.184703,
+        "rerank_score": 0.436605
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p1",
+        "retrieval_score": 0.470427,
+        "rerank_score": 0.434069
+      }
+    ],
+    "contradictions": [
+      {
+        "topic": "personal_token_expiry",
+        "preferred": {
+          "topic": "personal_token_expiry",
+          "value": "90 days",
+          "confidence": 0.99,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow 4.2 Release Notes",
+          "updated_at": "2026-04-02"
+        },
+        "alternatives": [
+          {
+            "topic": "personal_token_expiry",
+            "value": "90 days",
+            "confidence": 0.99,
+            "source_type": "documentation",
+            "source_title": "NimbusFlow 4.2 Release Notes",
+            "updated_at": "2026-04-02"
+          },
+          {
+            "topic": "personal_token_expiry",
+            "value": "no expiry",
+            "confidence": 0.55,
+            "source_type": "forum",
+            "source_title": "Do API tokens expire?",
+            "updated_at": "2025-01-11"
+          },
+          {
+            "topic": "personal_token_expiry",
+            "value": "no expiry",
+            "confidence": 0.55,
+            "source_type": "forum",
+            "source_title": "Do API tokens expire?",
+            "updated_at": "2025-01-10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "query": "My desktop agent is stuck on verifying certificate behind a proxy. What should I check?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Forum: Post by openops_eli (support-engineer): The desktop agent uses the operating system trust store instead of a bundled CA file. Import the proxy root certificate into the macOS System keychain, mark it trusted, then restar\n- Documentation: If the desktop sync agent shows **Verifying certificate** for longer than 30 seconds: 1. confirm the workspace URL matches the certificate common name 2. confirm the corporate proxy root certificate is present in the **s\n- Forum: Post by maya_ops (customer): After adding a corporate HTTPS inspection proxy, the macOS desktop agent never gets past 'Verifying certificate'. Browser access still works.\n\nTop citations:\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p2\n- [documentation] NimbusFlow Troubleshooting Guide -> Desktop agent certificate errors\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p1\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p3",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 1,
+      "forum": 3,
+      "blog": 1
+    },
+    "top_chunks": [
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p2",
+        "retrieval_score": 0.43129,
+        "rerank_score": 0.519843
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Desktop agent certificate errors",
+        "retrieval_score": 0.389936,
+        "rerank_score": 0.456595
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p1",
+        "retrieval_score": 0.403025,
+        "rerank_score": 0.433769
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.34274,
+        "rerank_score": 0.407893
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-agent-tuning",
+        "title": "Tuning NimbusFlow Desktop Sync for Large Repositories",
+        "section_title": "Proxy and certificate checks",
+        "retrieval_score": 0.293827,
+        "rerank_score": 0.383771
+      }
+    ],
+    "contradictions": []
+  },
+  {
+    "query": "How quickly does SCIM deprovision a removed contractor?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: SCIM 2.0 provisioning is available on Enterprise plans. New users, profile changes, and deprovision events are applied within **5 minutes** under normal conditions. Administrators can force a resync from **Settings > Sec\n- Documentation: Audit exports include login events, role changes, restore operations, API token creation, and SCIM actions. Large exports are streamed and may take several minutes to complete.\n- Forum: Post by oliver_admin (customer): If a contractor is removed from Okta, how quickly does NimbusFlow disable their access?\n\nContradictions detected:\n- On `scim_sync_delay`, prefer documentation (5 minutes); conflicting evidence: forum says hourly, forum says hourly.\n\nTop citations:\n- [documentation] NimbusFlow Administration Guide -> SCIM provisioning\n- [documentation] NimbusFlow Troubleshooting Guide -> Audit log exports\n- [forum] How long does SCIM deprovisioning take? -> Forum post p1\n- [forum] How long does SCIM deprovisioning take? -> Forum post p2",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 2,
+      "forum": 3,
+      "blog": 0
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "SCIM provisioning",
+        "retrieval_score": 0.264188,
+        "rerank_score": 0.46626
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-scim-thread",
+        "title": "How long does SCIM deprovisioning take?",
+        "section_title": "Forum post p1",
+        "retrieval_score": 0.414498,
+        "rerank_score": 0.438435
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-scim-thread",
+        "title": "How long does SCIM deprovisioning take?",
+        "section_title": "Forum post p2",
+        "retrieval_score": 0.240098,
+        "rerank_score": 0.392124
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-scim-thread",
+        "title": "How long does SCIM deprovisioning take?",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.204327,
+        "rerank_score": 0.379339
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Audit log exports",
+        "retrieval_score": 0.049927,
+        "rerank_score": 0.35794
+      }
+    ],
+    "contradictions": [
+      {
+        "topic": "scim_sync_delay",
+        "preferred": {
+          "topic": "scim_sync_delay",
+          "value": "5 minutes",
+          "confidence": 0.96,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow Administration Guide",
+          "updated_at": "2026-03-14"
+        },
+        "alternatives": [
+          {
+            "topic": "scim_sync_delay",
+            "value": "hourly",
+            "confidence": 0.51,
+            "source_type": "forum",
+            "source_title": "How long does SCIM deprovisioning take?",
+            "updated_at": "2025-11-06"
+          },
+          {
+            "topic": "scim_sync_delay",
+            "value": "hourly",
+            "confidence": 0.51,
+            "source_type": "forum",
+            "source_title": "How long does SCIM deprovisioning take?",
+            "updated_at": "2025-11-05"
+          },
+          {
+            "topic": "scim_sync_delay",
+            "value": "hourly",
+            "confidence": 0.51,
+            "source_type": "forum",
+            "source_title": "How long does SCIM deprovisioning take?",
+            "updated_at": "2025-11-05"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "query": "What is the API rate limit and how should a client react to 429 errors?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: The public REST API allows **120 requests per minute per workspace token**. When the limit is exceeded, the API returns `429 Too Many Requests` with a `Retry-After` header in seconds.\n- Documentation: Recommended client behavior - honor `Retry-After` exactly - retry with exponential backoff for bursty workloads - spread bulk sync jobs across minute boundaries\n- Documentation: If the desktop sync agent shows **Verifying certificate** for longer than 30 seconds: 1. confirm the workspace URL matches the certificate common name 2. confirm the corporate proxy root certificate is present in the **s\n\nTop citations:\n- [documentation] NimbusFlow Troubleshooting Guide -> API rate limits\n- [documentation] NimbusFlow Troubleshooting Guide -> API rate limits / Recommended client behavior\n- [documentation] NimbusFlow Troubleshooting Guide -> Desktop agent certificate errors\n- [blog] Preparing for NimbusFlow 4.2 Token Rotation -> What changes in 4.2",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 0,
+      "blog": 2
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "API rate limits",
+        "retrieval_score": 0.336375,
+        "rerank_score": 0.506551
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "API rate limits / Recommended client behavior",
+        "retrieval_score": 0.218038,
+        "rerank_score": 0.445051
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Desktop agent certificate errors",
+        "retrieval_score": 0.056343,
+        "rerank_score": 0.353097
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-4-2-migration",
+        "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "section_title": "What changes in 4.2",
+        "retrieval_score": 0.050294,
+        "rerank_score": 0.248392
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-4-2-migration",
+        "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "section_title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "retrieval_score": 0.048577,
+        "rerank_score": 0.247632
+      }
+    ],
+    "contradictions": []
+  },
+  {
+    "query": "Can I restore a workspace from two weeks ago?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: Restore workflow 1. open **Workspace Settings > Restore** 2. choose a timestamp 3. create a preview workspace 4. validate the preview 5. promote the preview back to production\n- Documentation: NimbusFlow stores continuous incremental backups and exposes self-service restore points for the last **30 days**. The target recovery point objective is **30 minutes**. Restores older than 30 days require OpenOps interv\n- Documentation: NimbusFlow can map up to **50 IdP groups** to workspace roles. Common patterns are: - `nimbus-admins` -> Workspace Admin - `nimbus-operators` -> Operator - `nimbus-viewers` -> Read Only If a user matches multiple mapped\n\nContradictions detected:\n- On `restore_rpo`, prefer documentation (30 minutes); conflicting evidence: documentation says 30 minutes, blog says 24 hours.\n- On `restore_retention`, prefer documentation (30 days); conflicting evidence: documentation says 30 days, blog says nightly snapshots.\n\nTop citations:\n- [documentation] NimbusFlow Troubleshooting Guide -> Restore points and retention / Restore workflow\n- [documentation] NimbusFlow Troubleshooting Guide -> Restore points and retention\n- [documentation] NimbusFlow Administration Guide -> Group and role mapping\n- [blog] What We Learned From Rebuilding the Restore Pipeline -> What We Learned From Rebuilding the Restore Pipeline",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 0,
+      "blog": 2
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Restore points and retention / Restore workflow",
+        "retrieval_score": 0.404202,
+        "rerank_score": 0.447032
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Restore points and retention",
+        "retrieval_score": 0.135277,
+        "rerank_score": 0.314083
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "Group and role mapping",
+        "retrieval_score": 0.114103,
+        "rerank_score": 0.30479
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-restore-post",
+        "title": "What We Learned From Rebuilding the Restore Pipeline",
+        "section_title": "What We Learned From Rebuilding the Restore Pipeline",
+        "retrieval_score": 0.175004,
+        "rerank_score": 0.272184
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-restore-post",
+        "title": "What We Learned From Rebuilding the Restore Pipeline",
+        "section_title": "What support teams should remember",
+        "retrieval_score": 0.142167,
+        "rerank_score": 0.257651
+      }
+    ],
+    "contradictions": [
+      {
+        "topic": "restore_rpo",
+        "preferred": {
+          "topic": "restore_rpo",
+          "value": "30 minutes",
+          "confidence": 0.94,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow Troubleshooting Guide",
+          "updated_at": "2026-03-20"
+        },
+        "alternatives": [
+          {
+            "topic": "restore_rpo",
+            "value": "30 minutes",
+            "confidence": 0.94,
+            "source_type": "documentation",
+            "source_title": "NimbusFlow Troubleshooting Guide",
+            "updated_at": "2026-03-20"
+          },
+          {
+            "topic": "restore_rpo",
+            "value": "24 hours",
+            "confidence": 0.45,
+            "source_type": "blog",
+            "source_title": "What We Learned From Rebuilding the Restore Pipeline",
+            "updated_at": "2025-08-14"
+          },
+          {
+            "topic": "restore_rpo",
+            "value": "24 hours",
+            "confidence": 0.45,
+            "source_type": "blog",
+            "source_title": "What We Learned From Rebuilding the Restore Pipeline",
+            "updated_at": "2025-08-14"
+          }
+        ]
+      },
+      {
+        "topic": "restore_retention",
+        "preferred": {
+          "topic": "restore_retention",
+          "value": "30 days",
+          "confidence": 0.93,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow Troubleshooting Guide",
+          "updated_at": "2026-03-20"
+        },
+        "alternatives": [
+          {
+            "topic": "restore_retention",
+            "value": "30 days",
+            "confidence": 0.93,
+            "source_type": "documentation",
+            "source_title": "NimbusFlow Troubleshooting Guide",
+            "updated_at": "2026-03-20"
+          },
+          {
+            "topic": "restore_retention",
+            "value": "nightly snapshots",
+            "confidence": 0.48,
+            "source_type": "blog",
+            "source_title": "What We Learned From Rebuilding the Restore Pipeline",
+            "updated_at": "2025-08-14"
+          },
+          {
+            "topic": "restore_retention",
+            "value": "nightly snapshots",
+            "confidence": 0.48,
+            "source_type": "blog",
+            "source_title": "What We Learned From Rebuilding the Restore Pipeline",
+            "updated_at": "2025-08-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "query": "What changed for audit exports in NimbusFlow 4.2?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: Audit exports include login events, role changes, restore operations, API token creation, and SCIM actions. Large exports are streamed and may take several minutes to complete.\n- Documentation: Administrators can export audit events from **Settings > Security > Audit Export**. The default export window is the last 7 days. For longer retention, configure scheduled exports to object storage.\n- Documentation: Audit exports are now available in **NDJSON** in addition to CSV. NDJSON is recommended for downstream SIEM ingestion and incremental processing.\n\nTop citations:\n- [documentation] NimbusFlow Troubleshooting Guide -> Audit log exports\n- [documentation] NimbusFlow Administration Guide -> Audit and security controls\n- [documentation] NimbusFlow 4.2 Release Notes -> Audit export improvements\n- [blog] What We Learned From Rebuilding the Restore Pipeline -> What changed",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 0,
+      "blog": 2
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Audit log exports",
+        "retrieval_score": 0.529235,
+        "rerank_score": 0.608706
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "Audit and security controls",
+        "retrieval_score": 0.397834,
+        "rerank_score": 0.554567
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Audit export improvements",
+        "retrieval_score": 0.364662,
+        "rerank_score": 0.539068
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-restore-post",
+        "title": "What We Learned From Rebuilding the Restore Pipeline",
+        "section_title": "What changed",
+        "retrieval_score": 0.105024,
+        "rerank_score": 0.246213
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-4-2-migration",
+        "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "section_title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "retrieval_score": 0.030661,
+        "rerank_score": 0.239703
+      }
+    ],
+    "contradictions": []
+  },
+  {
+    "query": "Should unattended jobs use personal tokens or service accounts?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: Service accounts Service account tokens do **not expire by default**, but administrators can opt into rotation policies at the workspace level. OpenOps recommends rotating service tokens every 180 days even when no hard\n- Documentation: NimbusFlow 4.2 introduces mandatory rotation for personal API tokens. **Personal tokens now expire after 90 days** and users receive reminders starting 14 days before expiration. Existing personal tokens created before 4\n- Documentation: Deprovisioning behavior When a user is deprovisioned from the identity provider: 1. active NimbusFlow sessions are revoked 2. API tokens owned by that user are disabled 3. queued background jobs keep running until comple\n\nContradictions detected:\n- On `personal_token_expiry`, prefer documentation (90 days); conflicting evidence: documentation says 90 days, forum says no expiry.\n- On `service_token_expiry`, prefer documentation (no expiry by default); conflicting evidence: documentation says no expiry by default, blog says long-lived.\n\nTop citations:\n- [documentation] NimbusFlow 4.2 Release Notes -> Security changes / Service accounts\n- [documentation] NimbusFlow 4.2 Release Notes -> Security changes\n- [documentation] NimbusFlow Administration Guide -> SCIM provisioning / Deprovisioning behavior\n- [forum] Do API tokens expire? -> Forum post p3",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 1,
+      "blog": 1
+    },
+    "top_chunks": [
+      {
+        "source_type": "blog",
+        "source_id": "blog-4-2-migration",
+        "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "section_title": "What changes in 4.2",
+        "retrieval_score": 0.366983,
+        "rerank_score": 0.438547
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Security changes / Service accounts",
+        "retrieval_score": 0.284549,
+        "rerank_score": 0.391944
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.225168,
+        "rerank_score": 0.368125
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Security changes",
+        "retrieval_score": 0.196167,
+        "rerank_score": 0.342323
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "SCIM provisioning / Deprovisioning behavior",
+        "retrieval_score": 0.142675,
+        "rerank_score": 0.32179
+      }
+    ],
+    "contradictions": [
+      {
+        "topic": "personal_token_expiry",
+        "preferred": {
+          "topic": "personal_token_expiry",
+          "value": "90 days",
+          "confidence": 0.99,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow 4.2 Release Notes",
+          "updated_at": "2026-04-02"
+        },
+        "alternatives": [
+          {
+            "topic": "personal_token_expiry",
+            "value": "90 days",
+            "confidence": 0.99,
+            "source_type": "documentation",
+            "source_title": "NimbusFlow 4.2 Release Notes",
+            "updated_at": "2026-04-02"
+          },
+          {
+            "topic": "personal_token_expiry",
+            "value": "no expiry",
+            "confidence": 0.55,
+            "source_type": "forum",
+            "source_title": "Do API tokens expire?",
+            "updated_at": "2025-01-11"
+          },
+          {
+            "topic": "personal_token_expiry",
+            "value": "90 days",
+            "confidence": 0.87,
+            "source_type": "blog",
+            "source_title": "Preparing for NimbusFlow 4.2 Token Rotation",
+            "updated_at": "2026-03-30"
+          }
+        ]
+      },
+      {
+        "topic": "service_token_expiry",
+        "preferred": {
+          "topic": "service_token_expiry",
+          "value": "no expiry by default",
+          "confidence": 0.91,
+          "source_type": "documentation",
+          "source_title": "NimbusFlow 4.2 Release Notes",
+          "updated_at": "2026-04-02"
+        },
+        "alternatives": [
+          {
+            "topic": "service_token_expiry",
+            "value": "no expiry by default",
+            "confidence": 0.91,
+            "source_type": "documentation",
+            "source_title": "NimbusFlow 4.2 Release Notes",
+            "updated_at": "2026-04-02"
+          },
+          {
+            "topic": "service_token_expiry",
+            "value": "long-lived",
+            "confidence": 0.74,
+            "source_type": "blog",
+            "source_title": "Preparing for NimbusFlow 4.2 Token Rotation",
+            "updated_at": "2026-03-30"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "query": "How many IdP groups can I map to NimbusFlow roles?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: NimbusFlow can map up to **50 IdP groups** to workspace roles. Common patterns are: - `nimbus-admins` -> Workspace Admin - `nimbus-operators` -> Operator - `nimbus-viewers` -> Read Only If a user matches multiple mapped\n- Documentation: Required SAML attributes - `email` must match the NimbusFlow primary identity - `first_name` and `last_name` are optional but recommended - `groups` is optional and is only needed when role mapping is enabled\n- Documentation: The public REST API allows **120 requests per minute per workspace token**. When the limit is exceeded, the API returns `429 Too Many Requests` with a `Retry-After` header in seconds.\n\nTop citations:\n- [documentation] NimbusFlow Administration Guide -> Group and role mapping\n- [documentation] NimbusFlow Administration Guide -> Single Sign-On Overview / Required SAML attributes\n- [documentation] NimbusFlow Troubleshooting Guide -> API rate limits\n- [blog] Preparing for NimbusFlow 4.2 Token Rotation -> Preparing for NimbusFlow 4.2 Token Rotation",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 3,
+      "forum": 1,
+      "blog": 1
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "Group and role mapping",
+        "retrieval_score": 0.395915,
+        "rerank_score": 0.562116
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-admin-guide",
+        "title": "NimbusFlow Administration Guide",
+        "section_title": "Single Sign-On Overview / Required SAML attributes",
+        "retrieval_score": 0.118435,
+        "rerank_score": 0.398636
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "API rate limits",
+        "retrieval_score": 0.097942,
+        "rerank_score": 0.390655
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-4-2-migration",
+        "title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "section_title": "Preparing for NimbusFlow 4.2 Token Rotation",
+        "retrieval_score": 0.078132,
+        "rerank_score": 0.269045
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-scim-thread",
+        "title": "How long does SCIM deprovisioning take?",
+        "section_title": "Forum post p2",
+        "retrieval_score": 0.009351,
+        "rerank_score": 0.227825
+      }
+    ],
+    "contradictions": []
+  },
+  {
+    "query": "Does the desktop agent use a private CA bundle?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Documentation: If the desktop sync agent shows **Verifying certificate** for longer than 30 seconds: 1. confirm the workspace URL matches the certificate common name 2. confirm the corporate proxy root certificate is present in the **s\n- Forum: Post by openops_eli (support-engineer): The desktop agent uses the operating system trust store instead of a bundled CA file. Import the proxy root certificate into the macOS System keychain, mark it trusted, then restar\n- Forum: Post by maya_ops (customer): After adding a corporate HTTPS inspection proxy, the macOS desktop agent never gets past 'Verifying certificate'. Browser access still works.\n\nTop citations:\n- [documentation] NimbusFlow Troubleshooting Guide -> Desktop agent certificate errors\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p2\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p1\n- [forum] Desktop agent stuck on verifying certificate -> Forum post p3",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 1,
+      "forum": 3,
+      "blog": 1
+    },
+    "top_chunks": [
+      {
+        "source_type": "documentation",
+        "source_id": "doc-support-guide",
+        "title": "NimbusFlow Troubleshooting Guide",
+        "section_title": "Desktop agent certificate errors",
+        "retrieval_score": 0.32159,
+        "rerank_score": 0.455668
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p2",
+        "retrieval_score": 0.204789,
+        "rerank_score": 0.396074
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p1",
+        "retrieval_score": 0.132586,
+        "rerank_score": 0.285014
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-agent-thread",
+        "title": "Desktop agent stuck on verifying certificate",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.110662,
+        "rerank_score": 0.275488
+      },
+      {
+        "source_type": "blog",
+        "source_id": "blog-agent-tuning",
+        "title": "Tuning NimbusFlow Desktop Sync for Large Repositories",
+        "section_title": "Tuning NimbusFlow Desktop Sync for Large Repositories",
+        "retrieval_score": 0.103977,
+        "rerank_score": 0.266417
+      }
+    ],
+    "contradictions": []
+  },
+  {
+    "query": "Why do older posts mention nightly snapshots?",
+    "answer": "OpenAI generation is unavailable, so this answer uses the deterministic fallback synthesizer.\n\nEvidence summary:\n- Blog: Older forum posts and runbooks may still mention nightly snapshots. Those references describe the retired architecture, not the current restore model.\n- Forum: Post by openops_mila (support-engineer): At the moment personal tokens do not expire automatically. If you need a safer setup, use a service account and rotate the token on your own schedule. Accepted answer.\n- Forum: Post by rhea_c (customer): We use personal API tokens in a nightly integration. I cannot find anything in the older docs about expiration. Do tokens ever expire automatically?\n\nTop citations:\n- [blog] What We Learned From Rebuilding the Restore Pipeline -> What support teams should remember\n- [forum] Do API tokens expire? -> Forum post p3\n- [forum] Do API tokens expire? -> Forum post p1\n- [documentation] NimbusFlow 4.2 Release Notes -> Security changes / Service accounts",
+    "runtime": {
+      "retrieval_provider": "lexical-fallback",
+      "answer_provider": "deterministic-fallback",
+      "embedding_model": "text-embedding-3-small",
+      "response_model": "gpt-5-mini",
+      "openai_configured": true,
+      "embedding_status": "ready",
+      "cached_embeddings": 37,
+      "total_chunks": 37,
+      "warning": "OpenAI answer generation failed: Network error: [Errno 8] nodename nor servname provided, or not known",
+      "embedding_usage": {},
+      "response_usage": {}
+    },
+    "source_usage": {
+      "documentation": 1,
+      "forum": 3,
+      "blog": 1
+    },
+    "top_chunks": [
+      {
+        "source_type": "blog",
+        "source_id": "blog-restore-post",
+        "title": "What We Learned From Rebuilding the Restore Pipeline",
+        "section_title": "What support teams should remember",
+        "retrieval_score": 0.312607,
+        "rerank_score": 0.396415
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p3",
+        "retrieval_score": 0.163494,
+        "rerank_score": 0.341139
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p1",
+        "retrieval_score": 0.191922,
+        "rerank_score": 0.290778
+      },
+      {
+        "source_type": "documentation",
+        "source_id": "doc-release-notes",
+        "title": "NimbusFlow 4.2 Release Notes",
+        "section_title": "Security changes / Service accounts",
+        "retrieval_score": 0.055483,
+        "rerank_score": 0.274903
+      },
+      {
+        "source_type": "forum",
+        "source_id": "forum-token-thread",
+        "title": "Do API tokens expire?",
+        "section_title": "Forum post p2",
+        "retrieval_score": 0.155291,
+        "rerank_score": 0.274749
+      }
+    ],
+    "contradictions": []
+  }
+]

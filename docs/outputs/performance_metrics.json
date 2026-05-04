@@ -1,0 +1,341 @@
+{
+  "summary": {
+    "query_count": 12,
+    "retrieval_hit_rate_at_5": 1.0,
+    "rerank_hit_rate_at_5": 1.0,
+    "retrieval_mrr_at_5": 1.0,
+    "rerank_mrr_at_5": 1.0,
+    "contradiction_accuracy": 1.0,
+    "preferred_source_top_rate": 1.0,
+    "avg_source_diversity_top5": 2.5,
+    "avg_source_id_diversity_top5": 3.167
+  },
+  "details": [
+    {
+      "query": "Do personal API tokens expire after NimbusFlow 4.2?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "doc-release-notes",
+        "forum-token-thread",
+        "forum-token-thread",
+        "forum-token-thread",
+        "blog-4-2-migration"
+      ],
+      "top_reranked_sources": [
+        "doc-release-notes",
+        "forum-token-thread",
+        "doc-release-notes",
+        "doc-support-guide",
+        "forum-token-thread"
+      ],
+      "contradiction_topics": [
+        "personal_token_expiry"
+      ]
+    },
+    {
+      "query": "My desktop agent is stuck on verifying certificate behind a proxy. What should I check?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "doc-support-guide",
+        "forum-agent-thread",
+        "blog-agent-tuning"
+      ],
+      "top_reranked_sources": [
+        "doc-support-guide",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "blog-agent-tuning"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "How quickly does SCIM deprovision a removed contractor?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "forum-scim-thread",
+        "doc-admin-guide",
+        "forum-scim-thread",
+        "forum-scim-thread",
+        "doc-support-guide"
+      ],
+      "top_reranked_sources": [
+        "doc-admin-guide",
+        "forum-scim-thread",
+        "forum-scim-thread",
+        "forum-scim-thread",
+        "doc-support-guide"
+      ],
+      "contradiction_topics": [
+        "scim_sync_delay"
+      ]
+    },
+    {
+      "query": "What is the API rate limit and how should a client react to 429 errors?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 2,
+      "top_retrieved_sources": [
+        "doc-support-guide",
+        "doc-support-guide",
+        "doc-support-guide",
+        "blog-4-2-migration",
+        "blog-4-2-migration"
+      ],
+      "top_reranked_sources": [
+        "doc-support-guide",
+        "doc-support-guide",
+        "doc-support-guide",
+        "blog-4-2-migration",
+        "blog-4-2-migration"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "Can I restore a workspace from two weeks ago?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "doc-support-guide",
+        "blog-restore-post",
+        "blog-restore-post",
+        "doc-support-guide",
+        "blog-restore-post"
+      ],
+      "top_reranked_sources": [
+        "doc-support-guide",
+        "doc-support-guide",
+        "doc-admin-guide",
+        "blog-restore-post",
+        "blog-restore-post"
+      ],
+      "contradiction_topics": [
+        "restore_retention",
+        "restore_rpo"
+      ]
+    },
+    {
+      "query": "What changed for audit exports in NimbusFlow 4.2?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 5,
+      "top_retrieved_sources": [
+        "doc-support-guide",
+        "doc-admin-guide",
+        "doc-release-notes",
+        "blog-restore-post",
+        "blog-4-2-migration"
+      ],
+      "top_reranked_sources": [
+        "doc-release-notes",
+        "doc-support-guide",
+        "doc-admin-guide",
+        "blog-restore-post",
+        "blog-4-2-migration"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "Should unattended jobs use personal tokens or service accounts?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 4,
+      "top_retrieved_sources": [
+        "blog-4-2-migration",
+        "doc-release-notes",
+        "forum-token-thread",
+        "doc-release-notes",
+        "forum-token-thread"
+      ],
+      "top_reranked_sources": [
+        "doc-release-notes",
+        "blog-4-2-migration",
+        "doc-release-notes",
+        "doc-admin-guide",
+        "forum-token-thread"
+      ],
+      "contradiction_topics": [
+        "personal_token_expiry",
+        "service_token_expiry"
+      ]
+    },
+    {
+      "query": "How many IdP groups can I map to NimbusFlow roles?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 4,
+      "top_retrieved_sources": [
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "doc-support-guide",
+        "blog-4-2-migration",
+        "forum-scim-thread"
+      ],
+      "top_reranked_sources": [
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "doc-support-guide",
+        "blog-4-2-migration",
+        "forum-scim-thread"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "Does the desktop agent use a private CA bundle?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "doc-support-guide",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "blog-agent-tuning"
+      ],
+      "top_reranked_sources": [
+        "doc-support-guide",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "forum-agent-thread",
+        "blog-agent-tuning"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "Why do older posts mention nightly snapshots?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "blog-restore-post",
+        "forum-token-thread",
+        "forum-token-thread",
+        "forum-token-thread",
+        "blog-restore-post"
+      ],
+      "top_reranked_sources": [
+        "blog-restore-post",
+        "forum-token-thread",
+        "forum-token-thread",
+        "doc-release-notes",
+        "forum-token-thread"
+      ],
+      "contradiction_topics": []
+    },
+    {
+      "query": "A forum says personal tokens last forever. What should I trust for version 4.2?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 3,
+      "source_id_diversity": 3,
+      "top_retrieved_sources": [
+        "blog-4-2-migration",
+        "doc-release-notes",
+        "blog-4-2-migration",
+        "blog-4-2-migration",
+        "forum-token-thread"
+      ],
+      "top_reranked_sources": [
+        "doc-release-notes",
+        "doc-release-notes",
+        "blog-4-2-migration",
+        "blog-4-2-migration",
+        "forum-token-thread"
+      ],
+      "contradiction_topics": [
+        "personal_token_expiry"
+      ]
+    },
+    {
+      "query": "If SCIM removal is delayed, should I wait an hour or force sync from the identity settings?",
+      "retrieval_hit@5": true,
+      "rerank_hit@5": true,
+      "retrieval_rr": 1.0,
+      "rerank_rr": 1.0,
+      "contradiction_ok": true,
+      "preferred_source_top": true,
+      "source_diversity": 2,
+      "source_id_diversity": 2,
+      "top_retrieved_sources": [
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "forum-scim-thread",
+        "forum-scim-thread"
+      ],
+      "top_reranked_sources": [
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "doc-admin-guide",
+        "forum-scim-thread",
+        "forum-scim-thread"
+      ],
+      "contradiction_topics": [
+        "scim_sync_delay"
+      ]
+    }
+  ]
+}

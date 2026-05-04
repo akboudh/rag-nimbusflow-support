@@ -1,0 +1,12 @@
+[
+  {"query": "Do personal API tokens expire after NimbusFlow 4.2?"},
+  {"query": "My desktop agent is stuck on verifying certificate behind a proxy. What should I check?"},
+  {"query": "How quickly does SCIM deprovision a removed contractor?"},
+  {"query": "What is the API rate limit and how should a client react to 429 errors?"},
+  {"query": "Can I restore a workspace from two weeks ago?"},
+  {"query": "What changed for audit exports in NimbusFlow 4.2?"},
+  {"query": "Should unattended jobs use personal tokens or service accounts?"},
+  {"query": "How many IdP groups can I map to NimbusFlow roles?"},
+  {"query": "Does the desktop agent use a private CA bundle?"},
+  {"query": "Why do older posts mention nightly snapshots?"}
+]
